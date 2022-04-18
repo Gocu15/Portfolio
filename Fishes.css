@@ -1,0 +1,132 @@
+.fishes
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+.fishL
+{
+	position: absolute;
+	list-style: none;
+	animation: swimmingL infinite linear 0s;
+	border-radius: 50%;
+	left:-600px;
+}
+.fishR
+{
+	position: absolute;
+	list-style: none;
+	animation: swimmingR infinite linear;
+	border-radius: 50%;
+	right:-600px;
+}
+.fishL:nth-child(1)
+{
+	top:-10%;
+	animation-delay: 5s;
+	animation-duration: 40s;
+	opacity:80%;
+}
+.fishL:nth-child(2)
+{
+	top:30%;
+	animation-delay: 17s;
+	animation-duration: 50s;
+	animation-direction: reverse;
+}
+.fishL:nth-child(3)
+{
+	top:40%;
+	animation-delay: 10s;
+	animation-duration: 20s;
+	animation-direction: reverse;
+	opacity:50%;
+}
+.fishR:nth-child(4)
+{
+	top:50%;
+	animation-delay: 14s;
+	animation-duration: 15s;
+	opacity:20%;
+}
+.ball
+{
+	z-index: 1;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 120px;
+	border-radius: 50%;
+	color:#255784;
+	background:#c4f8ff;
+	box-shadow: 0 0 40px #c4f8ff, 0 0 40px #c4f8ff, 0 0 40px #c4f8ff;
+}
+.fishR:nth-child(5)
+{
+	position: absolute;
+	top:0%;
+	animation-delay: 8s;
+	animation-duration: 20s;
+	opacity:8%;
+	right: -800px;
+}
+@keyframes swimmingL {
+  0% 
+  {
+    right: calc(100% + 500px);  
+    transform: translateY(0);
+  }
+  25%
+  {
+  	margin-top:300px;
+  }
+  48% 
+  {
+    transform: rotateY(0deg); 
+  }
+  50% 
+  { 
+    left: calc(100% + 500px);
+    transform: rotateY(180deg); 
+    margin-top:200px;
+  }
+  98%
+  {
+  	transform: rotateY(180deg); 
+  }
+  100% 
+  {
+    right: calc(100% + 500px); 
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes swimmingR {
+  0% 
+  {
+    right: -55%; 
+    transform: translateY(-50px);
+  }
+  25%
+  {
+  	transform: translateY(0px);
+  }
+  50% 
+  { 
+  	transform: translateY(50px);
+  }
+  75%
+  {
+  	transform: translateY(0px);
+  }
+  100% 
+  {
+    right: 150%;
+    transform: translateY(-50px);
+  }
+}

@@ -1,0 +1,180 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: consolas;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar
+{
+	width: 0;
+}
+
+#container
+{
+	position: sticky;
+	height: 100vh;
+	width: 60%;
+	background-color:rgba(2, 13, 23, 0.1);
+	margin-top: -100vh;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+section
+{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	scroll-snap-align: start;
+	overflow: hidden;
+}
+#rectangle
+{
+	position: absolute;
+	display: flex;
+	margin: 40px 0 0 0;
+	height: 100px;
+	width: 100%;
+	z-index: 4;
+	align-items: center;
+	justify-content: center;
+}
+a:link
+{
+	text-decoration:none;
+	left:20px;
+	position: relative;
+	margin-right:44px;
+	height: 100px;
+	width: 200px;
+	float:left;
+	text-align: center;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size:24px;
+	overflow: hidden;
+	transition:0.5s;
+	padding:35px 0 0 0;
+	color:#00386b;
+	border-radius: 20%;
+}
+a:visited
+{
+	color:#00386b;
+}
+/*a:hover
+{
+	color:#ffff;
+	background: #00386b;
+	box-shadow: 0 0 10px #00386b, 0 0 40px #00386b, 0 0 80px #00386b;
+	transition:0.3s;
+}*/
+li
+{
+	display: inline-block;
+}
+.active a
+{
+	color:#ffff;
+	background: #00386b;
+	box-shadow: 0 0 10px #00386b, 0 0 40px #00386b, 0 0 80px #00386b;
+}
+
+.sun
+{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	background-color: #f9cb5d;
+	border-radius: 50%;
+}
+.wave
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(images/wave.png);
+	background-size: 1000px 100px;
+	top: 31%;
+}
+.wave1
+{
+	animation: floating 30s linear infinite;
+	opacity: 1;
+	animation-delay: 0s;
+	bottom: 200px;
+}
+.wave2
+{
+	animation: floating2 17s linear infinite;
+	opacity: 0.5;
+	animation-delay: -5s;
+	bottom: 10px;
+}
+.wave3
+{
+	animation: floating 25s linear infinite;
+	opacity: 0.2;
+	animation-delay: -2s;
+	bottom: 15px;
+}
+.wave4
+{
+	animation: floating2 15s linear infinite;
+	opacity: 0.7;
+	animation-delay: -5s;
+	bottom: 20px;
+}
+
+
+@keyframes floating
+{
+	0%
+	{
+		background-position-x:0;
+	}
+	100%
+	{
+		background-position-x:1000px;
+	}
+}
+@keyframes floating2
+{
+	0%
+	{
+		background-position-x: 0;
+	}
+	100%
+	{
+		background-position-x: -1000px;
+	}
+}
+#start
+{
+	background: linear-gradient(0deg, #0090fc 10%, #2ea5ff 60%, white 10%, #fdd288,#f9855d);
+}
+#o_mnie
+{
+	background: linear-gradient(0deg, #0074cc 20%, #0090fc 80%);
+}
+#projekty
+{
+	background: linear-gradient(0deg, #00589b 20%, #0074cc 80%);
+}
+#kontakt
+{
+	background: linear-gradient(0deg, #004172 20%, #00589b 80%);
+}
